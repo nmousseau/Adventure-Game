@@ -1,13 +1,22 @@
+import random
+
+def die():
+    return random.randint(1,6)
+
 print("Welcome to Game")
 print("Type quit at any time to quit")
 print("Type go to continue")
 start = 'go'
 replay = 'play again'
 something = 'yes'
-Ahern = 'Ahern'
 McDonalds = 'McDonalds'
 Leavitt = 'Leavitt Park'
 Fratellos = 'Fratellos'
+Fight = 'Fight'
+Punch = 'Punch'
+Hit = 'Hit'
+Shoot = 'Shoot'
+Ejaculate = 'Ejaculate'
 Garage = 'Parking Garage'
 Aromas = 'Aroma Joes'
 Wash = 'Car Wash'
@@ -28,38 +37,89 @@ Braces = 'Braces'
 Police = 'Police'
 Make = 'Make'
 Watch = 'Watch'
+Phill = 'Phill Reed'
+Walmart = 'Walmart'
+Sals = 'Sals'
 game = True
 
+y = 50
 
 while game:
     ans = input("Type \n")
     if ans == "quit":
         game = False
-
+        
     if start in ans:
-        print('You find yourself boolin with the homies. They wanna go chill somewhere else. Do you want to go hang out at Ahern or McDonalds?')            
+        print('Welcome Phill Reed. You have been given the task to defeat the evil Phill Reed without losing all 50 health. Type McDonalds to start your journey.')
     if replay in ans:
-        print('You find yourself boolin with the homies. They wanna go chill somewhere else. Do you want to go hang out at Ahern or McDonalds?')
-    if Ahern in ans:
-        print('You decide to go to Ahern. While boolin wit the homies at Ahern, you get scared by the pedophile prison nearby. You all decide to leave. Do you want to go to Funspot or Memorial Park?')
+        print('Welcome Phill Reed. Type McDonalds to start your journey.')
+        y = 50
     if McDonalds in ans:
-         print('You decide to go to McDonalds. While boolin wit the homies at McDonalds, the LHS valedictorian from 2016 kicks you out for not buying anything. Pissed off, your homies decide to leave after squirting mayonnaise on his face. Do you want to go to Leavitt Park or Fratellos?')
+        print('You decide to go to McDonalds. While boolin wit the homies at McDonalds, the LHS valedictorian from 2016 kicks you out for not buying anything. Pissed off, your homies decide to leave after squirting mayonnaise on his face. Are you going to Fratellos or Leavitt Park?')
     if Leavitt in ans:
         print('You decide to go with your homies to Leavitt Park. When you get there, you realize your friend has given you a slight erection and you are forced to masturbate violently. You try to contain the cum in your hand, but some gets on your friends shirt. He is super mad, and threatens to beat you up. You call for a truce, but accidentally shake his hand with yours which is filled with hot cum. After both of you swallow cum, you need to clean up. Are you going to the car wash or the tressel?')
     if Fratellos in ans:
-        print('You and your homies get to Fratellos. After ordering a platter of coleslaw, your waiter comes back and sits on your lap. Apparently you had been giving him signs that you were DTF. Confused about your sexuality, you decide you have to leave, and convince your friends too. Are you going to go to the Parking Garage or Aroma Joes?')
+        print('You and your homies get to Fratellos. After ordering a platter of coleslaw, a Wild Evan Fields attacks you. You are forced to fight back. Type fight')
+    if Fight in ans:
+
+        x = die()
+        if x > 5:
+            print("The Wild Evan Fields hasn't showered and hits you with a stink bomb! You lose 5 health.")
+            y = (y - 5)
+            print("Health =", y)
+            print("Are you going to the Parking Garage or Aroma Joes?")
+        else:
+            print("You hit the Wild Evan Fields! He is disabled, and you escape. Are you going to the Parking Garage or Aroma Joes?")
+            print("Health =", y)
+
     if Garage in ans:
-        print('You decide to go to the Parking Garage. You see a lamborghini, and decide to take a piss on your friend. Your friend pushes you off the top floor of the parking garage and you land in a pothole. You died. Type quit to quit or play again to play again')
+        print('You decide to go to the Parking Garage. You see a lamborghini, and decide to take a piss on your friend. Your friend pushes you off the top floor of the parking garage you land in Phill Reeds hands while he caresses your cock. Type quit to quit or play again to play again')
     if Aromas in ans:
-        print('You decide to order a coffee for you and your homies to share. It tastes good. One of your homies gets a call inviting him to a party at the Belknap Mill. But, you would rather go to the Library. Are you gonna go to the Belknap Mill or the Library?')
+        print('You decide to order a coffee for you and your homies to share. It tastes good. One of your homies gets a call from Phill Reed saying come to the library. But, you would rather go to the Library to read books about the Wild Phill Reed. Are you gonna go to the Belknap Mill or the Library?')
     if Wash in ans:
         print('You head to the Car Wash to clean off. One of your friends gets soap in his eye and goes blind. He wanders out into the street where a passing car stops, grabs him and drives off. But that friend has autism, so do you want to go after him really or would you rather go to the Track? Chase or Track?')
     if Tressel in ans:
-        print('All of you head to the Tressel to wash off. You jump in one by one, then get out and push the car into the lake to clean it off. Unfortunately, you cant retrieve it and are forced to leave on foot. Are you going to Skate Escape or the Belknap Mall?')
+        print('All of you head to the Tressel to wash off. You jump in one by one, then get out and push the car into the lake to clean it off. Unfortunately, you cant retrieve it and are forced to leave on foot. But, as you try to leave a crazy Sister ODonnell jumps you. You are forced to fight back! Type Punch.')
+    if Punch in ans:
+
+        x = die()
+        if x > 5:
+            print("The Wild Sister O'Donnell hits you with some gang signs and breaks your arm! You lose 5 health.")
+            y = (y - 5)
+            print("Health =", y)
+            print("Are you going to Skate Escape or the Belknap Mall?")
+        else:
+            print("You hit the Wild Sister O'Donnell! With your huge blow, she is sent back to California. Are you going to Skate Escape or the Belknap Mall?")
+            print("Health =", y)
+            
     if Belknap in ans:
-        print('You all go to the party at the Belknap Mill. One of your friends snorts cocaine, but turns out it was actually dog shit. He starts dying, so you have to get him some help. Do you want to bring him to the homeless shelter on the Wow Trail or bring him to the Orthodontist?')
+        print('You all go to the party at the Belknap Mill. One of your friends snorts cocaine, but turns out it was actually dog shit. He starts dying, so you have to get him some help. But before you can, a Wild Chris pulls out an AR-15. You are forced to fight back. Type shoot to shoot')
+    if Shoot in ans:
+        
+        x = die()
+        if x > 4:
+            print("The Wild Chris blows a full round into your foot. You lose 10 health.")
+            y = (y - 10)
+            print("Health =", y)
+            print("Do you want to go to the homeless shelter on the Wow Trail or bring him to the Orthodontist?")
+        else:
+            print("You tricked Chris and he killed himself. Are you going to the homeless shelter on the Wow Trail or bring him to the Orthodontist?")
+            print("Health =", y)
+                  
     if Library in ans:
-        print('You get to the Library to try and check out Harry Potter and the Gay. Unfortunately, it is already checked out. You wrap yourself up in wires and hang yourself from the staircase. Pussy. Type quit to quit or play again to play again')
+        print('You get to the Library to try and check out Phill Reeds Greatest Moments Off Camera. But, you open the book and a 9 inch dildo comes out. It shoots cum at you. Type Ejaculate to Fight.')
+    if Ejaculate in ans:
+
+        x = die()
+        if x > 3:
+            print("The 9 inch dildo creampies your face. You lose 15 health.")
+            y = (y - 15)
+            print("Health =", y)
+            print("Do you want to go to the Car Wash or the Tressel to wash off?")
+        else:
+            print("You tricked Chris and he killed himself. Are you going to the homeless shelter on the Wow Trail or bring him to the Orthodontist?")
+            print("Health =", y)
+        
     if Chase in ans:
         print('You chase after your friend at 10mph. The car takes lots of turns, and stops at the high school. You watch from a distance. Out of the car steps Phill Reed. You run up to him as he is raping your blind friend. He asks if you want to join and you say yes. Type quit to quit or play again to play again')
     if Track in ans:
@@ -67,7 +127,19 @@ while game:
     if Skate in ans:
         print('You and your homies go to Skate Escape. When you get there, you realize it burned down. Out of depression and sexual longing, you all kill yourselves. Type quit to quit or play again to play again')
     if belknap in ans:
-        print('You go to the Belknap Mall with your homies to pump shit up. Your friends want to go to the coke house on Pine Street, but you would rather go to Eddies House. Are you going Pine Street or Eddies House?')
+        print('You go to the Belknap Mall with your homies to pump shit up. While lactating, a Wild Sam Bastis emerges fully clad in condoms. You are forced to fight back! Type hit')
+    if Hit in ans:
+
+        x = die()
+        if x > 4:
+            print("The Wild Sam Bastis shoves a condom down your throat and disappears. You lose 10 health.")
+            y = (y - 10)
+            print("Health =", y)
+            print("Your friends want to go to the coke house on Pine Street, but you would rather go to Eddies House. Are you going Pine Street or Eddies House?")
+        else:
+            print("You pulled out your own dick and shoved it down the Wild Sam Bastis' throat. Your friends want to go to the coke house on Pine Street, but you would rather go to Eddies House. Are you going Pine Street or Eddies House?")
+            print("Health =", y)
+
     if Wow in ans:
         print('You bring your friend who snorted dog shit to the Wow Trail to be treated by Joey T. Joey T diagnoses him as paralysed and you leave him with Joey T. Then you kill yourself. Type quit to quit or play again to play again')
     if Orthodontist in ans:
